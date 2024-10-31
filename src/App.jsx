@@ -1,14 +1,20 @@
 import './css/App.css';
+import './css/Annual.css';
 import Sidebar from './Nav/Sidebar.jsx';
 import Annual_Dashboard from './Comp/Annual/Annual_Dashboard.jsx';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="container">
-      <Sidebar />
-      <Annual_Dashboard />
-    </div>
-  );
+    <BrowserRouter>
+        <div className="container">
+            <Sidebar />
+            <Routes>
+                <Route path="/" element={<Annual_Dashboard />} />
+            </Routes>
+        </div>
+    </BrowserRouter>
+);
 }
 
 export default App;

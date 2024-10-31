@@ -6,7 +6,6 @@ const ExpenseTable = ({ expenseData }) => {
 
     return (
         <div className='table-container'>
-            <h3>Expense Categories</h3>
             <table className="data-table">
                 <thead>
                     <tr>

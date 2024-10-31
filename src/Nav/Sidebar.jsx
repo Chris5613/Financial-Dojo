@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/App.css'; 
 import pic from './pic.png';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const [isActive, setIsActive] = useState(true);
@@ -17,7 +18,7 @@ const Sidebar = () => {
             <nav className="menu">
                 <div className="menu-item nav-active" data-tooltip="Home">
                     <i className="bx bx-home-smile"></i>
-                    <span>Annual Dashboard</span>
+                    <Link to="/" className="custom-link"> <span>Annual Dashboard</span> </Link>
                 </div>
                 <div className="menu-item" data-tooltip="Stats">
                     <i className="bx bx-bar-chart-alt-2"></i>

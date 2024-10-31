@@ -1,4 +1,5 @@
 import '../../css/Annual.css';
+import '../../css/App.css';
 import { Bar } from 'react-chartjs-2';
 import {
     Chart as ChartJS,

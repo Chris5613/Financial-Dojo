@@ -168,3 +168,8 @@
 .chart-section {
     display: flex;
 }
+
+.custom-link {
+    color: inherit;        /* Inherits the color of the parent */
+    text-decoration: none; /* Removes underline */
+}
