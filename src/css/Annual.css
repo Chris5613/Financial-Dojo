@@ -1,0 +1,147 @@
+.dashboard {
+    padding: 20px;
+    background-color: rgb(27, 30, 31);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+
+.dashboard h1 {
+    margin-bottom: 20px;
+    align-self: flex-start; 
+}
+
+.dashboard-summary {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.summary-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 45px;
+    text-align: center;
+    width: 50%; 
+    margin: 10px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+
+.summary-item h2 {
+    margin-bottom: 10px;
+    margin-right: 1rem;
+}
+
+.summary-item p {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.income-p {
+    color: rgb(19, 87, 19);
+}
+
+.expenses-p {
+    color: rgb(164, 55, 55);
+}
+
+@media (min-width: 600px) {
+    .summary-item {
+        width: calc(33% - 20px); 
+    }
+}
+
+.chart-container {
+    margin-top: 30px;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.savings-goals {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    width: 92%; 
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+.progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 8px;
+    height: 20px;
+    width: 100%; 
+    margin: 10px 0;
+}
+
+.savings-goal {
+    text-align: center;
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.insights {
+    margin: 10px 0;
+}
+
+.insights h2 {
+    margin-bottom: 15px;
+    text-align: left; 
+    padding-left: 10px; 
+    white-space: nowrap; 
+}
+
+.insights-boxes {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.insight-item {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 55px;
+    text-align: center;
+    flex: 1; 
+    margin: 0 10px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-width: 150px; 
+}
+
+.insight-item p {
+    margin-top: 1rem;
+    font-size: 17px;
+}
+
+.dashboard-container {
+    display: flex; /* Use flexbox to align left and right sections */
+}
+
+.left-section {
+    flex: 0 0 70%; /* Adjust the width of the left section */
+    padding: 20px;
+}
+
+.right-section {
+    flex: 0 0 30%; /* Adjust the width of the right section */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-left: 1px solid #dee2e6; /* Optional: Add a border for separation */
+}
