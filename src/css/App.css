@@ -23,6 +23,7 @@ nav {
 
 .sidebar {
     width: var(--sidebar-width);
+    border-right: 2px solid black; /* Adjust color and width as needed */
 }
 
 .main {

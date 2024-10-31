@@ -15,7 +15,6 @@ const Sidebar = () => {
                 <img src={pic} width={140} alt="logo" />
             </div>
             <nav className="menu">
-                <h1 className="menu-header">Menu</h1>
                 <div className="menu-item nav-active" data-tooltip="Home">
                     <i className="bx bx-home-smile"></i>
                     <span>Annual Dashboard</span>
@@ -48,9 +47,6 @@ const Sidebar = () => {
             <div className="logout" data-tooltip="Logout">
                 <i className="bx bx-log-out"></i>
                 <span>Logout</span>
-            </div>
-            <div className="toggle-menu" id="toggle-button" onClick={toggleSidebar}>
-                <i className={`bx ${isActive ? 'bxs-left-arrow' : 'bxs-right-arrow'}`}></i>
             </div>
         </aside>
     );
