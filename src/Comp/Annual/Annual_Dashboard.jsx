@@ -1,4 +1,4 @@
-import '../css/Annual.css';
+import '../../css/Annual.css';
 import { Bar } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -12,8 +12,9 @@ import {
 import SavingsGoals from './SavingsGoals';
 import Insights from './Insights';
 import Summary from './Summary';
+import IncomeBarChart from './IncomeBarChart';
+import ExpenseBarChart from './ExpenseBarChart';
 
-// Register the components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const Annual_Dashboard = ({ totalIncome, totalExpenses }) => {
@@ -42,9 +43,34 @@ const Annual_Dashboard = ({ totalIncome, totalExpenses }) => {
         ]
     };
 
+    const incomeSources = [
+        { name: 'Salary', amount: 50000 },
+        { name: 'Investments', amount: 15000 },
+        { name: 'Freelance', amount: 12000 },
+        { name: 'Rental Income', amount: 8000 },
+        { name: 'Side Business', amount: 6000 },
+        { name: 'Dividends', amount: 4000 },
+        { name: 'Royalties', amount: 3000 },
+        { name: 'Interest', amount: 2000 },
+        { name: 'Gifts', amount: 1000 },
+        { name: 'Other', amount: 500 },
+    ];
+
+    const expenseData = [
+        { name: 'Rent', amount: 12000 },
+        { name: 'Groceries', amount: 6000 },
+        { name: 'Utilities', amount: 3000 },
+        { name: 'Transportation', amount: 4000 },
+        { name: 'Entertainment', amount: 2000 },
+        { name: 'Insurance', amount: 1500 },
+        { name: 'Healthcare', amount: 2500 },
+        { name: 'Other', amount: 3000 },
+    ];
+
+
     const options = {
         responsive: true,
-        maintainAspectRatio: false, // Ensure the chart can expand beyond the default aspect ratio
+        maintainAspectRatio: false,
         scales: {
             y: {
                 beginAtZero: true,
@@ -68,14 +94,13 @@ const Annual_Dashboard = ({ totalIncome, totalExpenses }) => {
                 <Summary totalIncome={totalIncome} totalExpenses={totalExpenses} total={total}/>
                 <SavingsGoals goalAmount={100000} currentSavings={21000} />
                 <div className="chart-container">
-                    <Bar data={data} options={options} height={400} /> 
+                    <Bar data={data} options={options} height={400}/> 
                 </div>
                 <Insights />
             </div>
             <div className="right-section">
-                <h2>Additional Info</h2>
-                {/* Add your content here */}
-                <p>This section can hold additional information or charts.</p>
+                <IncomeBarChart incomeSources={incomeSources}/>
+                <ExpenseBarChart expenseData={expenseData} />
             </div>
         </div>
     );

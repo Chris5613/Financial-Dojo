@@ -1,5 +1,3 @@
-import '../css/Annual.css'; 
-
 const SavingsGoals = ({ goalAmount, currentSavings }) => {
     const progressPercentage = Math.min((currentSavings / goalAmount) * 100, 100);
 

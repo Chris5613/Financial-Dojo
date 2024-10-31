@@ -1,6 +1,3 @@
-import React from 'react';
-import '../css/Annual.css'; // Ensure your styles are included
-
 const SavingsGoals = ({ goalAmount, currentSavings }) => {
     const progressPercentage = Math.min((currentSavings / goalAmount) * 100, 100);
 
