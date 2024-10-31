@@ -22,7 +22,7 @@ const Sidebar = () => {
                 </div>
                 <div className="menu-item" data-tooltip="Stats">
                     <i className="bx bx-bar-chart-alt-2"></i>
-                    <span>Monthly Dashboard</span>
+                    <Link to="/monthly" className="custom-link"> <span>Monthly Dashboard</span> </Link>
                 </div>
                 <div className="menu-item" data-tooltip="Chat">
                     <i className="bx bx-message-square-dots"></i>

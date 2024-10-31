@@ -1,0 +1,54 @@
+/* src/css/App.css */
+#month-select {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: black;
+    background-color: #c98f8f; /* Light background for a soft look */
+    border: 1px solid #ccc;    /* Subtle border */
+    border-radius: 4px;        /* Rounded corners */
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;          /* Spacing from other elements */
+    appearance: none;          /* Removes default styling in some browsers */
+    -webkit-appearance: none;  /* Safari compatibility */
+    -moz-appearance: none;     /* Firefox compatibility */
+}
+
+#year-select {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: black;
+    background-color: #c98f8f; /* Light background for a soft look */
+    border: 1px solid #ccc;    /* Subtle border */
+    border-radius: 4px;        /* Rounded corners */
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;          /* Spacing from other elements */
+    appearance: none;          /* Removes default styling in some browsers */
+    -webkit-appearance: none;  /* Safari compatibility */
+    -moz-appearance: none;     /* Firefox compatibility */
+}
+
+#month-select:focus {
+    border-color: #888;        /* Change border color on focus */
+}
+
+.custom-select {
+    padding: 8px 12px;
+    font-size: 16px;
+    color: black;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/* Styling for toggle label */
+label {
+    font-size: 14px;
+    margin: 10px 0;
+    display: block;
+}
