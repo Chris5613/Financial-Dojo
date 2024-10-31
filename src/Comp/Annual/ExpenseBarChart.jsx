@@ -1,4 +1,4 @@
-// src/Comp/ExpenseBarChart.jsx
+// src/Comp/IncomeBarChart.jsx
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
@@ -7,11 +7,11 @@ ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend)
 
 const ExpenseBarChart = ({ expenseData }) => {
     const data = {
-        labels: expenseData.map(expense => expense.name),
+        labels: expenseData.map(source => source.name),
         datasets: [
             {
-                label: 'Expenses',
-                data: expenseData.map(expense => expense.amount),
+                label: 'Expense Sources',
+                data: expenseData.map(source => source.amount),
                 backgroundColor: 'rgba(255, 99, 71, 0.6)', // Light color for expenses
             },
         ],
@@ -27,9 +27,9 @@ const ExpenseBarChart = ({ expenseData }) => {
     };
 
     return (
-        <div className="chart-container">
-            <h3>Expense Categories</h3>
-            <Bar data={data} options={options} height={400} /> {/* Set height here */}
+        <div style={{ width: '500px', height: '400px' }}>
+            <h3>Expense Sources</h3>
+            <Bar data={data} options={options}/>
         </div>
     );
 };

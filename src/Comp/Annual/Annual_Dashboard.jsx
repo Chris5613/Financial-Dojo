@@ -14,6 +14,8 @@ import Insights from './Insights';
 import Summary from './Summary';
 import IncomeBarChart from './IncomeBarChart';
 import ExpenseBarChart from './ExpenseBarChart';
+import IncomeTable from './IncomeTable';
+import ExpenseTable from './ExpenseTable';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -44,9 +46,6 @@ const Annual_Dashboard = ({ totalIncome, totalExpenses }) => {
     };
 
     const incomeSources = [
-        { name: 'Salary', amount: 50000 },
-        { name: 'Investments', amount: 15000 },
-        { name: 'Freelance', amount: 12000 },
         { name: 'Rental Income', amount: 8000 },
         { name: 'Side Business', amount: 6000 },
         { name: 'Dividends', amount: 4000 },
@@ -91,19 +90,27 @@ const Annual_Dashboard = ({ totalIncome, totalExpenses }) => {
         <div className="dashboard-container">
             <div className="left-section">
                 <h1>Annual Dashboard</h1>
-                <Summary totalIncome={totalIncome} totalExpenses={totalExpenses} total={total}/>
+                <Summary totalIncome={totalIncome} totalExpenses={totalExpenses} total={total} />
                 <SavingsGoals goalAmount={100000} currentSavings={21000} />
                 <div className="chart-container">
-                    <Bar data={data} options={options} height={400}/> 
+                    <Bar data={data} options={options} height={400} />
                 </div>
                 <Insights />
             </div>
             <div className="right-section">
-                <IncomeBarChart incomeSources={incomeSources}/>
-                <ExpenseBarChart expenseData={expenseData} />
+                <div className="charts-container">
+                    <div className="chart-section">
+                        <IncomeBarChart incomeSources={incomeSources} />
+                        <IncomeTable incomeSources={incomeSources} />
+                    </div>
+                    <div className="chart-section">
+                        <ExpenseBarChart expenseData={expenseData} />
+                        <ExpenseTable expenseData={expenseData} />
+                    </div>
+                </div>
             </div>
         </div>
     );
-};
+}
 
 export default Annual_Dashboard;

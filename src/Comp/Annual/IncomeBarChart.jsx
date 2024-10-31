@@ -27,9 +27,9 @@ const IncomeBarChart = ({ incomeSources }) => {
     };
 
     return (
-        <div>
+        <div style={{ width: '500px', height: '400px' }}>
             <h3>Income Sources</h3>
-            <Bar data={data} options={options} />
+            <Bar data={data} options={options}/>
         </div>
     );
 };

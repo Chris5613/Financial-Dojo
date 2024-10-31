@@ -120,20 +120,27 @@
 }
 
 .right-section {
-    flex: 0 0 30%; 
-    padding: 20px;
     background-color: rgb(27, 30, 31);
-    display: flex;
 }
 
 .charts-container {
-    display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 8rem;
 }
 
-.chart-section {
-    width: 50%; 
+.table-section {
+    margin-top: 20px; /* Space above tables */
+}
+
+/* ................. */
+
+.table-container {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    margin-left: 5rem;
 }
 
 .data-table {
@@ -144,10 +151,19 @@
 
 .data-table th, .data-table td {
     border: 1px solid #dee2e6;
-    padding: 8px;
+    padding: 10px;
     text-align: left;
 }
 
 .data-table th {
     background-color: #f8f9fa;
+    color: #333;
+}
+
+.data-table tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+.chart-section {
+    display: flex;
 }
