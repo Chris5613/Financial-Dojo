@@ -11,6 +11,7 @@ import {
 } from 'chart.js';
 import SavingsGoals from './SavingsGoals';
 import Insights from './Insights';
+import Summary from './Summary';
 
 // Register the components
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -60,25 +61,11 @@ const Annual_Dashboard = ({ totalIncome, totalExpenses }) => {
             }
         },
     };
-
     return (
         <div className="dashboard-container">
             <div className="left-section">
                 <h1>Annual Dashboard</h1>
-                <div className="dashboard-summary">
-                    <div className="summary-item">
-                        <h2>Total Income</h2>
-                        <p className='income-p'>${totalIncome}</p>
-                    </div>
-                    <div className="summary-item">
-                        <h2>Total Expenses</h2>
-                        <p className='expenses-p'>${totalExpenses}</p>
-                    </div>
-                    <div className="summary-item">
-                        <h2>Total Amount</h2>
-                        <p>${total}</p>
-                    </div>
-                </div>
+                <Summary totalIncome={totalIncome} totalExpenses={totalExpenses} total={total}/>
                 <SavingsGoals goalAmount={100000} currentSavings={21000} />
                 <div className="chart-container">
                     <Bar data={data} options={options} height={400} /> 
